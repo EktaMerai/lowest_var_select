@@ -1,0 +1,18 @@
+var myArray = [
+    {"ID": 1, "Cost": 200},
+    {"ID": 2, "Cost": 1000},
+    {"ID": 3, "Cost": 50},
+    {"ID": 4, "Cost": 500}
+]
+
+const minimumCostItem = _.minBy(myArray, "Cost");
+
+console.log("Minimum cost item: ", minimumCostItem);
+
+// Getting the maximum using a functional iteratee
+const maximumCostItem = _.maxBy(myArray, function(entry) {
+  return entry["Cost"];
+});
+
+console.log("Maximum cost item: ", maximumCostItem);
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.js"></script>
